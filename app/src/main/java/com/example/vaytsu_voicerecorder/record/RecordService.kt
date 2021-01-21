@@ -95,16 +95,17 @@ class RecordService: Service() {
     }
 
     private fun setFileNameAndPath() {
-        var count = 0
+        //var count = 0
+        val count = ""
         var f: File
-        val dateTime = SimpleDateFormat("d MMMM yyyy HH:mm:ss", Locale("ru")).format(System.currentTimeMillis())
+        val dateTime = SimpleDateFormat("dMMMyyyy_HH-mm-ss", Locale("ru")).format(System.currentTimeMillis())
 
         do {
-            mFileName = "$dateTime $count.mp4"
+            mFileName = dateTime + "_" + "$count.mp4"
             mFilePath = application.getExternalFilesDir(null)?.absolutePath
             mFilePath += "/$mFileName"
 
-            count++
+            //count++
 
             f = File(mFilePath)
         } while (f.exists() && !f.isDirectory)

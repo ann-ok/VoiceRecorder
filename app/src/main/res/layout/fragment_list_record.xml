@@ -15,24 +15,33 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="60dp">
 
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:visibility="visible" />
+
         <TextView
             android:id="@+id/recordsTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp"
             android:text="@string/list_records_title"
             android:textAlignment="center"
             android:textColor="@color/reply_blue_800"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:visibility="gone" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/recordsTitle"
+            android:layout_below="@+id/searchView"
             android:fadeScrollbars="true"
             android:isScrollContainer="true"
             android:scrollbarAlwaysDrawVerticalTrack="false"
