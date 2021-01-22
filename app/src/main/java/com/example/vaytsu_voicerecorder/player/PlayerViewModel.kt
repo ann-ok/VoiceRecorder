@@ -1,20 +1,12 @@
 package com.example.vaytsu_voicerecorder.player
 
 import android.app.Application
-import android.media.AudioAttributes
-import android.media.MediaPlayer
 import android.net.Uri
 import android.util.Log
 import androidx.lifecycle.*
-import com.google.android.exoplayer2.ExoPlayerFactory
 import com.google.android.exoplayer2.MediaItem
 import com.google.android.exoplayer2.Player
 import com.google.android.exoplayer2.SimpleExoPlayer
-import com.google.android.exoplayer2.extractor.DefaultExtractorsFactory
-import com.google.android.exoplayer2.source.ExtractorMediaSource
-import com.google.android.exoplayer2.source.ProgressiveMediaSource
-import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory
-import com.google.android.exoplayer2.util.Util
 
 class PlayerViewModel(itemPath: String, application: Application) : AndroidViewModel(application), LifecycleObserver {
 

@@ -4,13 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.DialogFragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.vaytsu_voicerecorder.R
-import com.example.vaytsu_voicerecorder.databinding.FragmentListRecordBinding
 import kotlinx.android.synthetic.main.custom_exo_controller_view.view.*
 import kotlinx.android.synthetic.main.fragment_player.*
 

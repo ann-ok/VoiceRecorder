@@ -17,8 +17,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.vaytsu_voicerecorder.MainActivity
 import com.example.vaytsu_voicerecorder.R
-import com.example.vaytsu_voicerecorder.database.RecordDatabase
-import com.example.vaytsu_voicerecorder.database.RecordDatabaseDao
 import com.example.vaytsu_voicerecorder.databinding.FragmentRecordBinding
 import kotlinx.android.synthetic.main.fragment_record.*
 import java.io.File
@@ -28,7 +26,6 @@ class RecordFragment : Fragment() {
 
     private lateinit var viewModel: RecordViewModel
     private lateinit var mainActivity: MainActivity
-    //private var database: RecordDatabaseDao? = null
     private val MY_PERMISSIOMS_RECORD_AUDIO = 123
 
     override fun onCreateView(
@@ -39,7 +36,6 @@ class RecordFragment : Fragment() {
             inflater, R.layout.fragment_record, container, false
         )
 
-        //database = context?.let { RecordDatabase.getInstance(it).recordDatabaseDao }
         mainActivity = activity as MainActivity
 
         viewModel = ViewModelProvider(this).get(RecordViewModel::class.java)

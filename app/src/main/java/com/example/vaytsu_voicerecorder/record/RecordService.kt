@@ -95,8 +95,7 @@ class RecordService: Service() {
     }
 
     private fun setFileNameAndPath() {
-        //var count = 0
-        val count = ""
+        var count = 0
         var f: File
         val dateTime = SimpleDateFormat("dMMMyyyy_HH-mm-ss", Locale("ru")).format(System.currentTimeMillis())
 
@@ -105,7 +104,7 @@ class RecordService: Service() {
             mFilePath = application.getExternalFilesDir(null)?.absolutePath
             mFilePath += "/$mFileName"
 
-            //count++
+            count++
 
             f = File(mFilePath)
         } while (f.exists() && !f.isDirectory)
